@@ -1,0 +1,116 @@
+@define-color main-color @color13;
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "Ndot55, DepartureMono Nerd Font";
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+window#waybar {
+  border-radius: 20px;
+  background: alpha(@background, 0.1);
+}
+#custom-mediaplayer {
+  font-family: "Ndot55, DepartureMono Nerd Font";
+  font-size: 16px;
+  border-radius: 2%;
+}
+#window {
+  color: lighter(@main-color);
+}
+
+#workspaces {
+  background: alpha(@background, 0.2);
+  border-radius: 20px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#workspaces button {
+  padding: 0px;
+  color: alpha(@foreground, 0.5);
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.active {
+  background: alpha(@background, 0.2);
+  color: lighter(@main-color);
+  border-radius: 20px;
+  transition: color 0.5s;
+  margin-left: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 3px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.8s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.focused {
+  color: @color5;
+  background: transparent;
+}
+
+#workspaces button.urgent {
+  color: @color5;
+  background: transparent;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: @color5;
+}
+
+#clock,
+#battery,
+#network,
+#memory,
+#custom-recording,
+#bluetooth,
+#cpu #workspaces {
+  padding: 0px 14px 0px 14px;
+}
+
+#clock {
+  color: lighter(@main-color);
+  background: transparent;
+}
+
+#cpu,
+#network {
+  color: lighter(@main-color);
+  background: transparent;
+}
+
+#bluetooth {
+  color: lighter(@main-color);
+  background: transparent;
+}
+
+#battery {
+  color: lighter(@main-color);
+  background: transparent;
+}
+
+#memory {
+  color: lighter(@main-color);
+  background: transparent;
+}
+#pulseaudio {
+  color: lighter(@main-color);
+  background: transparent;
+}
+#tray {
+  color: lighter(@main-color);
+  background: transparent;
+}

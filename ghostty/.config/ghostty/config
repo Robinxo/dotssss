@@ -1,0 +1,14 @@
+config-file = ~/.cache/wal/ghostty.conf
+
+font-family = "Rubik Regular"
+background-opacity = 0.9
+
+keybind = ctrl+r=reload_config
+
+
+# Set the cursor to a blinking block with smooth animations
+cursor-style = "block"
+cursor-style-blink = true
+shell-integration-features = "no-cursor"
+
+

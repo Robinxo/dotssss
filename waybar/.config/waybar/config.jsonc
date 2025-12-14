@@ -1,0 +1,73 @@
+{
+  // dwm-style Waybar config: left=workspaces, center=dynamic status, right=tray+clock
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["clock", "pulseaudio", "memory", "cpu", "tray"],
+
+  "tray-position": "right",
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " 󰺕 ",
+      "4": "  ",
+      "5": "  ",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+    },
+    "persistent-workspaces": {
+      "*": 5, // 5 workspaces by default on every m
+    },
+    "all-outputs": true,
+    "disable-scroll": true,
+    "on-click": "hyprctl dispatch workspace {name}",
+  },
+
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "interval": 30,
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "Muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "scroll-step": 5,
+  },
+
+  "cpu": {
+    "format": "C {usage}%",
+  },
+
+  "memory": {
+    "format": "R {used}/{total}MiB",
+  },
+
+  "network": {
+    "format-wifi": "{essid} {signal}%",
+    "format-ethernet": "ETH {ifname}: {ipaddr}",
+    "format-disconnected": "NO NET",
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "tooltip": false,
+  },
+  // },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 4,
+  },
+
+  "module-margin": 6,
+  "reload_style_on_change": true,
+}
