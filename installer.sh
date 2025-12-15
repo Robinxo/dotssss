@@ -21,8 +21,27 @@ if ! command -v paru &>/dev/null; then
 else
   info "paru is already installed."
 fi
-info "checking the best mirrors"
-cachyos-rate-mirrors
+info "Mirrorssssssssss select em"
+
+select opt in "bare arch" "endeavouros" "cachyos"; do
+  case $opt in
+  "Bare arch")
+    rate-mirrors arch
+    ;;
+  "endeavouros")
+    rate-mirrors endeavouros
+    ;;
+  "cachyos")
+    cachyos-rate-mirrors
+    ;;
+  "Exit")
+    break
+    ;;
+  *)
+    echo "Invalid choice"
+    ;;
+  esac
+done
 
 # List of packages to install via paru
 PACKAGES=(
@@ -62,6 +81,9 @@ PACKAGES=(
   fcitx5-gtk
   fcitx5-qt
   fcitx5-mozc
+  ttf-jetbrains-mono-nerd
+  network-manager-applet
+  anki-bin
 )
 
 info "Installing packages: ${PACKAGES[*]}"
@@ -69,7 +91,7 @@ paru -S --needed --noconfirm "${PACKAGES[@]}"
 
 info "Refreshing font cache..."
 fc-cache -fv
-
+rm -rf ~/.config/fish
 # Stow all subdirectories from current dir
 STOW_TARGETS=(hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen)
 
