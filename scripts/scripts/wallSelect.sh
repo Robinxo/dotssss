@@ -3,7 +3,7 @@
 cacheDir="$HOME/.cache/wallcache"
 scriptsDir="$HOME/scripts"
 
-# Create cache dir if not exists
+#reate cache dir if not exists
 [ -d "$cacheDir" ] || mkdir -p "$cacheDir"
 
 # Root wallpaper folder

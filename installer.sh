@@ -14,9 +14,7 @@ sudo pacman -Syu --needed --noconfirm base-devel git
 # Install paru if not already installed
 if ! command -v paru &>/dev/null; then
   info "paru not found, installing paru..."
-  git clone https://aur.archlinux.org/paru.git /tmp/paru
-  pushd /tmp/paru
-  makepkg -si --noconfirm
+  sudo pacman -S paru
   popd
 else
   info "paru is already installed."
@@ -61,8 +59,7 @@ PACKAGES=(
   bc
   fish
   lazygit
-  discord
-  departure-mono-font
+  vesktop
   apple-fonts
   pokemon-colorscripts-git
   nodejs
@@ -84,6 +81,10 @@ PACKAGES=(
   ttf-jetbrains-mono-nerd
   network-manager-applet
   anki-bin
+  ani-cli
+  adobe-source-han-sans-jp-fonts
+  adobe-source-han-serif-jp-fonts
+  cachyos-gaming-meta
 )
 
 info "Installing packages: ${PACKAGES[*]}"
@@ -92,8 +93,9 @@ paru -S --needed --noconfirm "${PACKAGES[@]}"
 info "Refreshing font cache..."
 fc-cache -fv
 rm -rf ~/.config/fish
+rm -rf ~/.config/kitty
 # Stow all subdirectories from current dir
-STOW_TARGETS=(hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen)
+STOW_TARGETS=(hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen kitty)
 
 info "Stowing config folders from $(pwd)..."
 for dir in "${STOW_TARGETS[@]}"; do
@@ -104,5 +106,10 @@ for dir in "${STOW_TARGETS[@]}"; do
     info "Skipping $dir (not found)"
   fi
 done
+info "wallpaperising"
+wal -i Pictures/wallpapers/aesthetics\ wallpaper/SundarOrat.jpg
+
+# Colors (pywal)
+include ~/.cache/wal/colors-kitty.conf
 
 info "✅ All done. System is set up and dotfiles are applied!"
