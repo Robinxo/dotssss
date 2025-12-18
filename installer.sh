@@ -20,7 +20,7 @@ else
   info "paru is already installed."
 fi
 info "Checking cachy-os mirrors"
-cachyos-rate-mirrors
+sudo cachyos-rate-mirrors
 
 # List of packages to install via paru
 PACKAGES=(
@@ -88,9 +88,6 @@ for dir in "${STOW_TARGETS[@]}"; do
   fi
 done
 info "wallpaperising"
-wal -i Pictures/wallpapers/aesthetics\ wallpaper/SundarOrat.jpg
-
-# Colors (pywal)
-include ~/.cache/wal/colors-kitty.conf
+wal -i 'Pictures/wallpapers/aesthetics\ wallpaper/SundarOrat.jpg'
 
 info "✅ All done. System is set up and dotfiles are applied!"
