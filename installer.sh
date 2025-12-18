@@ -19,27 +19,8 @@ if ! command -v paru &>/dev/null; then
 else
   info "paru is already installed."
 fi
-info "Mirrorssssssssss select em"
-
-select opt in "bare arch" "endeavouros" "cachyos"; do
-  case $opt in
-  "Bare arch")
-    rate-mirrors arch
-    ;;
-  "endeavouros")
-    rate-mirrors endeavouros
-    ;;
-  "cachyos")
-    cachyos-rate-mirrors
-    ;;
-  "Exit")
-    break
-    ;;
-  *)
-    echo "Invalid choice"
-    ;;
-  esac
-done
+info "Checking cachy-os mirrors"
+cachyos-rate-mirrors
 
 # List of packages to install via paru
 PACKAGES=(
