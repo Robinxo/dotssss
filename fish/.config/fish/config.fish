@@ -7,21 +7,21 @@ if status is-interactive
     starship init fish | source
 end
 
-# List Directory
+# list directory
 alias l='eza -lh  --icons=auto' # long list
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
+alias ld='eza -lhd --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree' # list folder as tree
 
-# Handy change dir shortcuts
+# handy change dir shortcuts
 abbr .. 'cd ..'
 abbr ... 'cd ../..'
 abbr .3 'cd ../../..'
 abbr .4 'cd ../../../..'
 abbr .5 'cd ../../../../..'
 
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+# always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr mkdir 'mkdir -p'
 
 # alias for my easiness
@@ -98,3 +98,10 @@ zoxide init fish | source
 
 # opencode
 fish_add_path /home/om/.opencode/bin
+
+# Android studio Stuff
+
+set -x ANDROID_HOME $HOME/Android/Sdk
+set -x PATH $PATH $ANDROID_HOME/platform-tools
+set -x PATH $PATH $ANDROID_HOME/emulator
+set -x PATH $PATH $ANDROID_HOME/cmdline-tools/latest/bin

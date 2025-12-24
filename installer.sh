@@ -66,10 +66,14 @@ PACKAGES=(
   adobe-source-han-sans-jp-fonts
   adobe-source-han-serif-jp-fonts
   cachyos-gaming-meta
+  feh
 )
 
 info "Installing packages: ${PACKAGES[*]}"
 paru -S --needed --noconfirm "${PACKAGES[@]}"
+
+info "setting up bun"
+curl -fsSL https://bun.sh/install | bash
 
 info "Refreshing font cache..."
 fc-cache -fv

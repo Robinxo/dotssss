@@ -6,7 +6,7 @@
   font-family: "JetBrains Mono Nerd", monospace;
   font-size: 13px;
   font-weight: 600;
-  color: @foreground;
+  color: @color11;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +30,6 @@ window#waybar {
 #clock,
 #tray {
   background: transparent;
-  color: @foreground;
   padding: 2px 6px;
   margin: 0 2px;
   border: none;
@@ -93,6 +92,7 @@ window#waybar {
 /* Tray icons compact */
 #tray {
   padding: 0 4px;
+  color: @color9;
   margin-left: 0;
 }
 #tray .tray-icon {
