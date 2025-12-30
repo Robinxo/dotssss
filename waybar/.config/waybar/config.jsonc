@@ -1,5 +1,4 @@
 {
-  // dwm-style Waybar config: left=workspaces, center=dynamic status, right=tray+clock
   "layer": "top",
   "position": "top",
   "exclusive": true,
@@ -12,8 +11,8 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": " ",
-      "2": " ",
+      "1": " ",
+      "2": " ",
       "3": " 󰺕 ",
       "4": "  ",
       "5": "  ",
@@ -30,12 +29,13 @@
   },
 
   "clock": {
-    "format": "{:%a %d %b %H:%M}",
-    "interval": 30,
+    "tooltip-format": "<big>[{:%Y %B}]</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "[{:%H:%M}]",
+    "format-alt": "[{:%Y-%m-%d}]",
   },
 
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "[VOL:{volume}% {icon}]",
     "format-muted": "Muted",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
@@ -44,11 +44,11 @@
   },
 
   "cpu": {
-    "format": "C {usage}%",
+    "format": "[C {usage}%]",
   },
 
   "memory": {
-    "format": "R {used}/{total}MiB",
+    "format": "[R {used}/{total}MiB]",
   },
 
   "network": {

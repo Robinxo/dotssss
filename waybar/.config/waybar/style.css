@@ -44,6 +44,7 @@ window#waybar {
   color: @foreground;
   padding: 1px 6px;
   margin: 0 2px;
+  transition: none;
   border-radius: 0;
   font-family: "Fira Code", monospace;
   font-size: 11px;
@@ -51,35 +52,22 @@ window#waybar {
 }
 
 /* States */
-#workspaces button.occupied {
-  color: @color9;
-  background: transparent;
-}
-
-#workspaces button.empty {
-  color: @color8;
-  background: transparent;
-}
-
-#workspaces button.focused {
-  color: @background;
-  background: @color10;
-  font-weight: 700;
-  border-bottom: 1px solid @color10;
-  padding: 1px 5px;
-}
-
-#workspaces button.urgent {
-  color: @background;
-  background: @color12;
-  padding: 1px 6px;
-}
-
 #workspaces button.visible {
   color: @color14;
   background: transparent;
   border-top: 2px solid @color15;
   padding: 1px 5px;
+}
+
+/* Disable workspace hover / focus highlight completely */
+#workspaces button:hover,
+#workspaces button:focus,
+#workspaces button:active,
+#workspaces button:checked {
+  box-shadow: none;
+  transition: none;
+  border: none;
+  outline: none;
 }
 
 /* Separator: simulate thin line with left-border on a module */
