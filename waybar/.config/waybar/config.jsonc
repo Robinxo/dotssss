@@ -2,8 +2,8 @@
   "layer": "top",
   "position": "top",
   "exclusive": true,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
   "modules-right": ["clock", "pulseaudio", "memory", "cpu", "tray"],
 
   "tray-position": "right",
@@ -30,12 +30,12 @@
 
   "clock": {
     "tooltip-format": "<big>[{:%Y %B}]</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "[{:%H:%M}]",
+    "format": "[{:%I:%M %p}]",
     "format-alt": "[{:%Y-%m-%d}]",
   },
 
   "pulseaudio": {
-    "format": "[VOL:{volume}% {icon}]",
+    "format": "[VOL:{volume}%]",
     "format-muted": "Muted",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
@@ -58,7 +58,7 @@
   },
 
   "hyprland/window": {
-    "format": "{}",
+    "format": "[]={}",
     "tooltip": false,
   },
   // },
