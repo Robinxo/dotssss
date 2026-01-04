@@ -16,6 +16,11 @@
       "3": " 󰺕 ",
       "4": "  ",
       "5": "  ",
+      "6": " 󰉋 ", // Folder
+      "7": " 󰭹 ", // Chat
+      "8": " 󰈙 ", // Document
+      "9": " 󰆼 ", // Cloud / Sync
+      "10": " 󰒓 ", // Tools
       "urgent": "",
       "focused": "",
       "default": "",
@@ -64,8 +69,8 @@
   // },
 
   "tray": {
-    "icon-size": 16,
-    "spacing": 4,
+    "icon-size": 15,
+    "spacing": 1,
   },
 
   "module-margin": 6,
