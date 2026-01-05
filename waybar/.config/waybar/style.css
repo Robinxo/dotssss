@@ -1,4 +1,4 @@
-@import "colors-waybar.css";
+@import "/home/om/.cache/wal/colors-waybar.css";
 
 /* GTK-safe minimal dwm-style Waybar CSS */
 
@@ -6,7 +6,7 @@
   font-family: "JetBrains Mono Nerd", monospace;
   font-size: 13px;
   font-weight: 600;
-  color: @color3;
+  color: @foreground;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;

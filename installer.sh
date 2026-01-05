@@ -41,6 +41,7 @@ PACKAGES=(
   fish
   lazygit
   vesktop
+  vicinae-bin
   apple-fonts
   pokemon-colorscripts-git
   nodejs

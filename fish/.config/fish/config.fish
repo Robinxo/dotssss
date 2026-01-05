@@ -66,7 +66,6 @@ set PATH $PATH /home/om/.local/bin
 
 set -x WLR_DRM_DEVICES /dev/dri/card0
 set -x LIBVA_DRIVER_NAME iHD
-set -x DRI_PRIME 0
 set -x WLR_RENDERER vulkan
 set -x WLR_NO_HARDWARE_CURSORS 1
 

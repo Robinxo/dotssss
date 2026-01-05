@@ -63,7 +63,7 @@
   },
 
   "hyprland/window": {
-    "format": "[]={}",
+    "format": "[]= {}",
     "tooltip": false,
   },
   // },
