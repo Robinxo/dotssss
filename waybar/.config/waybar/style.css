@@ -6,7 +6,7 @@
   font-family: "JetBrains Mono Nerd", monospace;
   font-size: 13px;
   font-weight: 600;
-  color: @foreground;
+  color: @color1;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
