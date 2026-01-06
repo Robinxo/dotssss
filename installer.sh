@@ -68,6 +68,7 @@ PACKAGES=(
   adobe-source-han-serif-jp-fonts
   cachyos-gaming-meta
   feh
+  cptv
 )
 
 info "Installing packages: ${PACKAGES[*]}"
@@ -81,7 +82,7 @@ fc-cache -fv
 rm -rf ~/.config/fish
 rm -rf ~/.config/kitty
 # Stow all subdirectories from current dir
-STOW_TARGETS=(hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen kitty)
+STOW_TARGETS=(lf hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen kitty)
 
 info "Stowing config folders from $(pwd)..."
 for dir in "${STOW_TARGETS[@]}"; do
