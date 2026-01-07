@@ -4,7 +4,14 @@
   "exclusive": true,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
-  "modules-right": ["clock", "pulseaudio", "memory", "cpu", "tray"],
+  "modules-right": [
+    "network#speed",
+    "clock",
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "tray",
+  ],
 
   "tray-position": "right",
 
@@ -61,7 +68,19 @@
     "format-ethernet": "ETH {ifname}: {ipaddr}",
     "format-disconnected": "NO NET",
   },
-
+  "network#speed": {
+    "interval": 1,
+    "format": "{ifname}",
+    "format-wifi": "[ {bandwidthDownBytes}  {bandwidthUpBytes}] ",
+    "format-ethernet": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 30,
+  },
   "hyprland/window": {
     "format": "[] = {}",
     "tooltip": false,
