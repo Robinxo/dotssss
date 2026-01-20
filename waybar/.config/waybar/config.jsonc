@@ -3,7 +3,7 @@
   "position": "top",
   "exclusive": true,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": [],
+  "modules-center": ["custom/potato"],
   "modules-right": [
     "network#speed",
     "clock",
@@ -14,7 +14,11 @@
   ],
 
   "tray-position": "right",
-
+  "custom/potato": {
+    "exec": "potd -fN ",
+    "on-click": "potctl -t",
+    "on-click-right": "potctl -r",
+  },
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -84,6 +88,7 @@
   "hyprland/window": {
     "format": "[] = {}",
     "tooltip": false,
+    "on-click": "swaync-client -t",
   },
   // },
 

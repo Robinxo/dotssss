@@ -69,6 +69,7 @@ PACKAGES=(
   cachyos-gaming-meta
   feh
   cptv
+  potato-c
 )
 
 info "Installing packages: ${PACKAGES[*]}"
