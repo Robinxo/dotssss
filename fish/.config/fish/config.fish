@@ -53,7 +53,11 @@ alias i="paru -S"
 alias u="paru -Syu"
 alias r="paru -R"
 alias R="paru -Rns"
-alias s="paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -S"
+
+function s
+    set pkgs (paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75%)
+    test -n "$pkgs"; and paru -S $pkgs
+end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"

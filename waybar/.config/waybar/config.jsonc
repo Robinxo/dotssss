@@ -15,7 +15,8 @@
 
   "tray-position": "right",
   "custom/potato": {
-    "exec": "potd -fN ",
+    "exec": "potctl -1 0",
+    "interval": 1,
     "on-click": "potctl -t",
     "on-click-right": "potctl -r",
   },
