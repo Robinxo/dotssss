@@ -69,6 +69,7 @@ PACKAGES=(
   cachyos-gaming-meta
   feh
   cptv
+  waybar-mpris-git
 )
 
 info "Installing packages: ${PACKAGES[*]}"
