@@ -15,7 +15,7 @@
 
   "tray-position": "right",
   "custom/potato": {
-    "exec": "potctl -1 0",
+    "exec": "sh -c 'echo \"[ $(potctl -1 0) ]\"'",
     "interval": 1,
     "on-click": "potctl -t",
     "on-click-right": "potctl -r",
@@ -94,6 +94,7 @@
   // },
   "custom/waybar-mpris": {
     "return-type": "json",
+    "format": "[ {} ]",
     "exec": "waybar-mpris --position --autofocus",
     "on-click": "waybar-mpris --send toggle",
     // This option will switch between players on right click.
@@ -105,6 +106,7 @@
     // "on-scroll-up": "waybar-mpris --send next",
     // "on-scroll-down": "waybar-mpris --send prev",
     "escape": true,
+    "max-length": 35,
   },
   "tray": {
     "icon-size": 15,
