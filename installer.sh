@@ -83,7 +83,7 @@ fc-cache -fv
 rm -rf ~/.config/fish
 rm -rf ~/.config/kitty
 # Stow all subdirectories from current dir
-STOW_TARGETS=(lf hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen kitty)
+STOW_TARGETS=(lf hypr fish waybar rofi swaync nvim scripts lazygit bash wallpapers ghostty matugen kitty quickshell)
 
 info "Stowing config folders from $(pwd)..."
 for dir in "${STOW_TARGETS[@]}"; do
