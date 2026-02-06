@@ -29,7 +29,7 @@ PACKAGES=(
   neovim
   swww
   matugen-bin
-  python-pywal16
+  python-pywal16-git
   swaync
   rofi
   cliphist
