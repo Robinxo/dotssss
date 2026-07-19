@@ -70,6 +70,7 @@ PACKAGES=(
   feh
   cptv
   waybar-mpris-git
+  wl-color-picker
 )
 
 info "Installing packages: ${PACKAGES[*]}"
